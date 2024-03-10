@@ -1,0 +1,43 @@
+.MainPage .Maincontainer {
+    background-image: url(../../assets/2k_stars_milky_way.jpg);
+    margin-top: 2rem;
+}
+.MainPage .Maincontainer .mini-cards {
+    width: 40%;
+    padding: .5rem;
+}
+.MainPage .Maincontainer .large-cards {
+    width: 60%;
+    padding: .5rem;
+}
+.MainPage .Maincontainer .card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border: 2px solid var(--white1);
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+}
+
+.MainPage .Maincontainer .transition {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: .6s;
+}
+.MainPage .Maincontainer .transition.show {
+    transform: translate(0);
+    opacity: 1;
+}
+
+@media (max-width: 760px) {
+    .MainPage .Maincontainer .con {
+        flex-wrap: wrap;
+    }
+    .MainPage .Maincontainer .mini-cards,
+    .MainPage .Maincontainer .large-cards {
+        width: 100%;
+    }
+}

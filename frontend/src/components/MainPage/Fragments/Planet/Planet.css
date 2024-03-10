@@ -1,0 +1,19 @@
+.card.planet {
+    padding: unset !important;
+    aspect-ratio: unset !important;
+}
+.card.planet .planet3d {
+    aspect-ratio: 1;
+}
+.card.planet .text {
+    padding: 0 .5rem 3rem;
+    text-align: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+.card.planet .text h2 {
+    color: var(--light2);
+}
+.card.planet .text p {
+    color: var(--white1);
+    font-family: var(--font2);
+}

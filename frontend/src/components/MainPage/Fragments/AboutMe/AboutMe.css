@@ -1,0 +1,50 @@
+.AboutMe .card {
+    position: relative;
+    aspect-ratio: unset !important;
+    padding: unset !important;
+    cursor: pointer;
+    text-decoration: unset;
+}
+.AboutMe .card:hover {
+    box-shadow: 0 0 12px 6px var(--light1);
+    transition: .8s;
+}
+.AboutMe .card img {
+    width: 80%;
+}
+.AboutMe .card:hover img {
+    transform: scale(.8);
+    transition: .8s;
+}
+.AboutMe .card::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 200%;
+    background: var(--light1);
+    animation: border-Shadow 4s linear infinite;
+}
+.AboutMe .card::after {
+    position: absolute;
+    content: "";
+    inset: .5rem;
+    background: #000000;
+    border-radius: .5rem;
+}
+@keyframes border-Shadow {
+    0% { transform: rotate(0);}
+    100% { transform: rotate(360deg);}
+}
+.AboutMe .card .text {
+    z-index: 1;
+    padding: 1rem 0;
+}
+.AboutMe .card .text h1 {
+    color: var(--white1);
+}
+.AboutMe .card .text h2 {
+    color: var(--white1);
+    font-family: var(--font2);
+    font-size: 2rem;
+    text-decoration: underline;
+}

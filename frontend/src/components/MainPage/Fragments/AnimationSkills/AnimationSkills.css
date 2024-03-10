@@ -1,0 +1,166 @@
+.AnimationSkills {
+    margin-top: 4rem;
+}
+.AnimationSkills .text {
+    max-width: 1400px;
+    padding: .5rem;
+}
+.AnimationSkills .text h2 {
+    color: var(--white1);
+    font-family: var(--font4);
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    text-align: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: .6s;
+    transition-delay: .2s;
+}
+.AnimationSkills .text p {
+    font-size: 1.5rem;
+    font-family: var(--font2);
+    width: 80%;
+    color: var(--white1);
+    text-align: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: .6s;
+    transition-delay: .4s;
+}
+.AnimationSkills .text .show {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.AnimationSkills .text .con {
+    width: 80%;
+    margin: 3rem 0;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.AnimationSkills .text .con .card {
+    margin: 0 1rem;
+    border-radius: 2rem;
+    background: var(--middle2);
+    border: 3px solid var(--light2);
+    padding: .5rem 0 2rem;
+    transform: scale(0);
+    transition: .6s;
+    transition-delay: .4s;
+}
+.AnimationSkills .text .con .card:nth-child(2) {
+    transition-delay: .6s;
+}
+.AnimationSkills .text .con .card.show {
+    transform: scale(1);
+}
+.AnimationSkills .text .con .card h3 {
+    color: var(--dark2);
+}
+.AnimationSkills .text .con .card ul {
+    margin-top: 1rem;
+}
+.AnimationSkills .text .con .card ul li {
+    color: var(--white1);
+    font-family: var(--font3);
+    font-size: 20px;
+    margin-bottom: .5rem;
+}
+.AnimationSkills .text .con .card ul li::marker {
+    color: var(--dark2);
+}
+
+.AnimationSkills .container {
+    position: relative;
+    padding: 2rem 0;
+    align-items: flex-start;
+    overflow: hidden;
+}
+.AnimationSkills .container::before,
+.AnimationSkills .container::after {
+    position: absolute;
+    content: "";
+    width: 25%;
+    height: 100%;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 25%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+.AnimationSkills .container::after {
+    left: unset;
+    right: 0;
+    transform: rotate(180deg);
+}
+.AnimationSkills .container .con {
+    width: unset;
+    justify-content: flex-start;
+}
+.AnimationSkills .container .con img {
+    width: 120px;
+}
+.AnimationSkills .container .con.top {
+    animation: languages-left 20s linear infinite;
+}
+.AnimationSkills .container .con.middle {
+    animation: languages-right 40s linear infinite reverse;
+}
+.AnimationSkills .container .con.bottom {
+    animation: languages-left 60s linear infinite;
+}
+@keyframes languages-left {
+    0% {transform: translate(0);}
+    100% {transform: translateX(-100%);}
+}
+@keyframes languages-right {
+    0% {transform: translate(0);}
+    100% {transform: translateX(-100%);}
+}
+
+@media (max-width: 880px) {
+    .AnimationSkills .text .con {
+        width: 100%;
+    }
+}
+@media (max-width: 680px) {
+    .AnimationSkills .text .con {
+        flex-wrap: wrap;
+        padding: .5rem;
+    }
+    .AnimationSkills .text .con .card {
+        width: 100%;
+        margin: 0 0 1rem;
+    }
+    .AnimationSkills .container .con img {
+        width: 100px;
+    }
+}
+@media (max-width: 520px) {
+    .AnimationSkills .text h2 {
+        font-size: 2rem;
+    }
+    .AnimationSkills .text p {
+        width: 100%;
+        font-size: 20px;
+    }
+    .AnimationSkills .container .con img {
+        width: 80px;
+    }
+}
+@media (max-width: 420px) {
+    .AnimationSkills .text h2 {
+        font-size: 1.5rem;
+    }
+    .AnimationSkills .text p {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .AnimationSkills .text .con .card ul {
+        margin-top: .5rem;
+    }
+    .AnimationSkills .text .con .card ul li {
+        font-size: 1rem;
+    }
+    .AnimationSkills .container .con img {
+        width: 60px;
+    }
+}

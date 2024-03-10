@@ -1,0 +1,155 @@
+.Contact {
+    perspective: 1000px;
+}
+.Contact .card {
+    position: relative;
+    transition: 1.2s;
+    border-radius: 1rem;
+    transform-style: preserve-3d;
+    aspect-ratio: .9 !important;
+    overflow: unset !important;
+}
+.Contact .card.rotate {
+    transform: rotateY(180deg);
+}
+.Contact .card .front,
+.Contact .card .back {
+    position: absolute;
+    height: 100%;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+.Contact .card .front {
+    background: var(--dark5);
+    justify-content: flex-start;
+}
+.Contact .card .front h2 {
+    color: var(--middle2);
+}
+.Contact .card .back {
+    transform: rotateY(180deg);
+    justify-content: flex-start;
+    overflow: hidden;
+    background: var(--dark1);
+}
+
+.Contact .card .head {
+    justify-content: space-between;
+    padding: .5rem;
+}
+.Contact .card .head strong {
+    color: var(--light2);
+    font-family: var(--font2);
+}
+.Contact .card button {
+    background: var(--middle2);
+    color: var(--white1);
+    padding: 4px .5rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+}
+.Contact .card .back h2 {
+    color: var(--middle2);
+}
+.Contact .card .back dfn {
+    cursor: help;
+    position: relative;
+    color: var(--middle2);
+}
+.Contact .card .back strong {
+    color: var(--white1);
+    font-family: var(--font3);
+}
+.Contact .card .back span {
+    font-family: var(--font3);
+    font-size: 20px;
+    color: var(--light2);
+}
+dfn::after {
+    content: attr(data-info);
+    display: inline;
+    position: absolute;
+    top: 22px; left: 0;
+    opacity: 0;
+    width: 230px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding: 0.5em 0.8em;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    pointer-events: none;
+    transition: opacity 250ms, top 250ms;
+}
+dfn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px; left: 20px;
+    opacity: 0;
+    width: 0; height: 0;
+    border: solid transparent 5px;
+    border-bottom-color: rgba(0,0,0,0.8);
+    transition: opacity 250ms, top 250ms;
+}
+dfn:hover {z-index: 2;}
+dfn:hover::after,
+dfn:hover::before {opacity: 1;}
+dfn:hover::after {top: 30px;}
+dfn:hover::before {top: 20px;}
+
+@media (Max-width: 980px) {
+    .Contact .card {
+        aspect-ratio: .7 !important;
+    }
+    .Contact .card h2 {
+        font-size: 20px !important;
+    }
+    .Contact .card .back span {
+        font-size: 1rem;
+    }
+    .Contact .card .back strong {
+        font-size: 14px;
+    }
+    .Contact .card .back dfn {
+        font-size: 14px;
+    }
+}
+@media (max-width: 780px) {
+    .Contact .card {
+        aspect-ratio: .65 !important;
+    }
+}
+@media (max-width: 760px) {
+    .Contact .card {
+        aspect-ratio: 1.5 !important;
+    }
+}
+@media (max-width: 620px) {
+    .Contact .card {
+        aspect-ratio: 1.2 !important;
+    }
+}
+@media (max-width: 520px) {
+    .Contact .card {
+        aspect-ratio: 1 !important;
+    }
+}
+@media (max-width: 420px) {
+    .Contact .card {
+        aspect-ratio: .8 !important;
+    }
+}
+@media (max-width: 340px) {
+    .Contact .card {
+        aspect-ratio: .7 !important;
+    }
+    .Contact .card .back strong {
+        font-size: 12px;
+    }
+    .Contact .card .back dfn {
+        font-size: 12px;
+    }
+}
